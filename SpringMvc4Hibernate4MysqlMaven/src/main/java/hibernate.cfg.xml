@@ -5,7 +5,8 @@
 <hibernate-configuration>        
   <session-factory>
     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-    <property name="show_sql">true</property>  
-    <mapping resource="net/codejava/spring/model/User.hbm.xml"/>
+    <property name="show_sql">true</property>
+    <!--DEPRECADO - (*h1) usar packagesToScan q Escanea las entidad de Hibernbate -->  
+	<!-- <mapping class="net.codejava.spring.model."/> -->
   </session-factory>
 </hibernate-configuration>

@@ -35,6 +35,8 @@
     <bean id="sessionFactory"
         class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
+        <!--(*h1) Escanea las entidad de Hibernbate -->
+        <property name="packagesToScan" value="net.codejava.spring.model" />
 		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
     </bean>
      
