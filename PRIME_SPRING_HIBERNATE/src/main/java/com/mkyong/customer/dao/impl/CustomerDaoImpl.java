@@ -22,11 +22,10 @@ public class CustomerDaoImpl implements CustomerDao{
 
 	}
 	
+	@Transactional
 	public void addCustomer(Customer customer){
- 
-//		customer.setCreatedDate(new Date());
-//		getHibernateTemplate().save(customer);
- 
+		customer.setCreatedDate(new Date());
+		sessionFactory.getCurrentSession().save(customer);
 	}
  
 	@SuppressWarnings("unchecked")

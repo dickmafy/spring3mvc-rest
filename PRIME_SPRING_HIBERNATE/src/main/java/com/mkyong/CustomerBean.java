@@ -31,7 +31,6 @@ public class CustomerBean implements Serializable{
 	
 	@PostConstruct
 	public void init(){
-		
 		System.out.println("INIT");
 		//System.out.println(customerBo.findAllCustomer().size()); 
 	}
@@ -49,18 +48,16 @@ public class CustomerBean implements Serializable{
 	
 	
 	//add a new customer data into database
-	public String addCustomer(){
-		System.out.println(customerBo.findAllCustomer().size()); 
-//		Customer cust = new Customer();
-//		cust.setName(getName());
-//		cust.setAddress(getAddress());
-//		
-//		customerBo.addCustomer(cust);
-//		
-//		clearForm();
-		
-		return "";
+	public void addCustomer(){
+		//System.out.println(customerBo.findAllCustomer().size()); 
+		Customer cust = new Customer();
+		cust.setName(getName());
+		cust.setAddress(getAddress());
+		customerBo.addCustomer(cust);
+		clearForm();
+		setCustomerList(customerBo.findAllCustomer());
 	}
+		
 	
 	//clear form values
 	private void clearForm(){

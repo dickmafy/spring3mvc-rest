@@ -55,7 +55,7 @@
  			<h:panelGrid columns="3">
 			
 				Name : 
-				<h:inputText id="name" value="#{customer.name}" 
+				<h:inputText id="name" value="#{CustomerBean.name}" 
 					size="20" required="true"
 					label="Name" >
 				</h:inputText>
@@ -63,7 +63,7 @@
 				<h:message for="name" style="color:red" />
 			
 				Address : 
-				<h:inputTextarea id="address" value="#{customer.address}" 
+				<h:inputTextarea id="address" value="#{CustomerBean.address}" 
 					cols="30" rows="10" required="true"
 					label="Address" >
 				</h:inputTextarea>
@@ -72,7 +72,7 @@
 				
 			</h:panelGrid>
 			
-			<h:commandButton value="Submit" action="#{customer.addCustomer()}" />
+			<h:commandButton value="Submit" actionListener="#{CustomerBean.addCustomer()}" />
 
  		</h:form>
  		
