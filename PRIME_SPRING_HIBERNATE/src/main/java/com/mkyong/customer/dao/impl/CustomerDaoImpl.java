@@ -3,14 +3,16 @@ package com.mkyong.customer.dao.impl;
 import java.util.Date;
 import java.util.List;
  
-import com.mkyong.customer.dao.CustomerDao;
-import com.mkyong.customer.model.Customer;
+
 
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.mkyong.customer.dao.CustomerDao;
+import com.mkyong.customer.model.Customer;
  
 public class CustomerDaoImpl implements CustomerDao{
  
