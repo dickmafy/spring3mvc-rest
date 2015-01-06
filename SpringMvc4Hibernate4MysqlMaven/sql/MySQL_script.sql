@@ -1,4 +1,6 @@
-create database usersdb;
+create database testSpringHibernate;
+
+use testSpringHibernate;
 
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -6,5 +8,8 @@ CREATE TABLE `users` (
   `password` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1
+);
 
+INSERT INTO `users` (`user_id`,`username`,`password`,`email`) VALUES (16,'diego','diego','aa@ga,com');
+INSERT INTO `users` (`user_id`,`username`,`password`,`email`) VALUES (17,'jose','jose','bbb');
+INSERT INTO `users` (`user_id`,`username`,`password`,`email`) VALUES (18,'mavel','mavel','ccccc');

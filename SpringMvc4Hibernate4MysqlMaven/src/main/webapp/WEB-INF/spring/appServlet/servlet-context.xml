@@ -27,9 +27,9 @@
 	
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/usersdb"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/testSpringHibernate"/>
         <property name="username" value="root"/>
-        <property name="password" value="root"/>
+        <property name="password" value=""/>
     </bean>	
     
     <bean id="sessionFactory"
@@ -46,7 +46,12 @@
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
     
-	<bean id="userDao" class="net.codejava.spring.dao.UserDAOImpl">
+     <!-- Para que funcione el fileUpload -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="2000000" />
+    </bean>
+    
+    <bean id="userDao" class="net.codejava.spring.dao.UserDAOImpl">
 	    <constructor-arg>
 	        <ref bean="sessionFactory" />
 	    </constructor-arg>
