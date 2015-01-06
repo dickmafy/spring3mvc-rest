@@ -1,0 +1,99 @@
+.titulo {font-family: "century gothic", Arial, Helvetica, sans-serif; font-size: 32px; font-weight: normal; color: #990033; text-decoration: none}
+.subtitulo {
+	FONT-FAMILY: "century gothic", Arial, Helvetica, sans-serif; COLOR: #990033; FONT-SIZE: 12px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.titularrojo {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #990033; FONT-SIZE: 16px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.subtitularazul { font-family: Arial, Helvetica, sans-serif; font-size: 19px; font-weight: normal; color: #990033; text-decoration: none }
+.subtitularazulbold { font-family: Arial, Helvetica, sans-serif; font-size: 19px; font-weight: bold; color: #990033; text-decoration: none }
+
+.arial12 { font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: normal; color: #A1A1A1; text-decoration: none }
+.arial11 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #000000; }
+.arial10 { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #A1A1A1; }
+.arial8bold { font-family: Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; color: #A1A1A1; }
+.arial9bold { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #A1A1A1; }
+.arial10bold { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #A1A1A1; }
+.arial11bold { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000000; }
+.arial12bold { font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color: #A1A1A1; text-decoration: none }
+.arial12rojo { font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: normal; color: #990033; }
+.arial11rojo { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #990033; }
+.arial10rojo { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #990033; }
+.arial12rojobold { font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color: #990033; text-decoration: none }
+.arial11rojobold { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #990033; }
+
+.arial10blanco { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #E1E1E1; text-decoration: none }
+.arial10blancobold { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #E1E1E1; text-decoration: none }
+
+.arial11azul { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #000090; text-decoration: none }
+.arial12azul { font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: normal; color: #000090; text-decoration: none }
+
+.arial11nRojoNota { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #FF0000; }
+.arial11nAzulNota { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #0000FF; }
+
+.arial9negro { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #000000; }
+.arial10negro { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; text-decoration: none }
+.arial11negro {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000; FONT-SIZE: 11px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.arial11negrobold { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000000; text-decoration: none }
+.arial12negrobold { font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color: #000000; text-decoration: none }
+.negro { font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #000000; }
+
+.copyright  {font-size: 9px; color: #7D7D7D; padding-left: 4px;}
+.linea  {font-size: 6px; color: #7D7D7D; padding-left: 4px;}
+.linea2  {font-size: 4px; color: #7D7D7D; padding-left: 4px;}
+
+.verdana9red { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #000000; }
+.verdana9redbold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #AA0000; }
+.verdana10redbold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #000000; }
+.verdana13redbold{ font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #000000; }
+.verdana10red { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; }
+.verdana11red { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000000; }
+
+.verdana8negro { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8px; font-weight: normal; color: #000000; }
+.verdana8negrobold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8px; font-weight: bold; color: #000000; }
+.verdana9negro { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #000000; }
+.verdana9negrobold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #000000; }
+.verdana10negrobold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000000; }
+.verdana10negro { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #000000; }
+.verdana11negro { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #000000; }
+.verdana12negrobold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color: #000000; }
+/*
+.verdana9Naranja { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #000000; }
+.verdana9Naranjabold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #000000; }
+.verdana10Naranjabold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #000000; }
+.verdana11Naranjabold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000000; }
+*/
+.menuproductos { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; color: #000000; text-decoration: none }
+.menuproductosrojo { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: bold; color: #000000; text-decoration: none }
+.formulario { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; font-weight: normal; color: #000000; text-decoration: none }
+
+.verdana9gris { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #000000; }
+.verdana9grisbold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #000000; }
+.verdana10gris { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; }
+.verdana10grisbold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #000000; }
+.verdana11gris { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #000000; text-decoration: none }
+.verdana11grisbold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000000; text-decoration: none }
+
+.verdanaGris1boldred { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #000000; }
+
+.verdana9azulbold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: bold; color: #246098; }
+.verdana9azul { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; color: #000000; }
+.verdana10azul { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: normal; color: #000000; }
+.verdana11azulbold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #000000; }
+ 
+.verdana12negro { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: normal; color: #000000; }
+.verdana14negrobold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: bold; color: #000000; }
+.verdana12negro { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; font-weight: normal; color: #000000; }
+.verdana14negrobold { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: bold; color: #000000; }
+
+
+table.borderrojo {
+	border-width: 2px 2px 2px 2px;
+	border-spacing: 2px;
+	border-style: solid solid solid solid;
+	border-color: #000000 #000000 #000000 #000000;
+	border-collapse: collapse;
+	background-color: white;
+}

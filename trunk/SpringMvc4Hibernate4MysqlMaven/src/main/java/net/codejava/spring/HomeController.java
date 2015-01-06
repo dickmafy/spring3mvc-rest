@@ -20,9 +20,9 @@ public class HomeController {
 	private UserDAO userDao;
 	
 	@RequestMapping(value="/")
-	public ModelAndView home() {
+	public ModelAndView index() {
 		List<User> listUsers = userDao.list();
-		ModelAndView model = new ModelAndView("home");
+		ModelAndView model = new ModelAndView("index");
 		model.addObject("userList", listUsers);
 		return model;
 	}
