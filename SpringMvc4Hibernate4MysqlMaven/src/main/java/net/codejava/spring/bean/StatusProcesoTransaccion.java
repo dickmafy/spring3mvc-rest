@@ -5,7 +5,6 @@ public class StatusProcesoTransaccion {
 	
 	private String estado;
 	private String descError;
-	private DctoMorosoBean docMoroso;
 	private String mensaje;
 	private String usuario;
 	private int result;
@@ -22,12 +21,7 @@ public class StatusProcesoTransaccion {
 	public void setDescError(String descError) {
 		this.descError = descError;
 	}
-	public DctoMorosoBean getDocMoroso() {
-		return docMoroso;
-	}
-	public void setDocMoroso(DctoMorosoBean docMoroso) {
-		this.docMoroso = docMoroso;
-	}
+
 	public String getMensaje() {
 		return mensaje;
 	}
