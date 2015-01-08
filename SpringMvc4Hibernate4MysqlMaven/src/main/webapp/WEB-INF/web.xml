@@ -23,6 +23,7 @@
     <servlet-name>appServlet</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+  
    <servlet-mapping>
         <servlet-name>appServlet</servlet-name>
         <url-pattern>*.htm</url-pattern>
