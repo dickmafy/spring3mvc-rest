@@ -1,0 +1,152 @@
+body{ margin:0px; font-family:Arial; font-size:11px;} 
+legend{font-size:12px; font-family:Arial; font-weight:bold;}
+
+#dibMenuPrincipal {width:100%; height:28px; background-color:#ccc; background-image:url(../imagenes/fondo_menu.jpg); background-repeat:repeat-x; vertical-align:bottom;}
+#dibMenuPrincipal ul { float:left; margin-bottom:0px; margin-top:0px; list-style:none;}
+#dibMenuPrincipal ul li {float:left; margin:0px; list-style:none; padding-top:5px; padding-bottom:5px; padding-left:1px; padding-right:1px;}
+#dibMenuPrincipal ul li a {text-decoration:none; background-image:url(../imagenes/fondo01_rojo2.jpg); background-repeat:repeat-x; background-color:#990033; color:#fff; font-weight:bold; font-size:11px; padding-top:5px; padding-bottom:5px; padding-left:20px; padding-right:20px;}
+#dibMenuPrincipal ul li a:hover{text-decoration:none; color:#fff; background-image:url(../imagenes/fondo01_gray2.jpg); background-repeat:repeat-x;}
+
+#divBienvenida {margin-left:30px; width:838px; margin-top:20px; margin-bottom:20px; float:left; border:0px solid #666666;}
+#divBienvenida_menu {margin-left:30px; width:200px; margin-top:20px; margin-bottom:20px; float:left; border:0px solid #666666;}
+#divBienvenida2 {margin-left:30px; float:left; border:0px solid #666666; width:33%; margin:auto; text-align:center;color:#990033;font-weight:bold; font-style:italic;}
+#divBienvenida h1 { margin:0px; font-size:18px; font-weight:bold; font-style:italic; color:#990033; }
+#divBienvenida_menu h1 { margin:0px; font-size:18px; font-weight:bold; font-style:italic; color:#990033; }
+#divBienvenida p { margin:0px; font-size:14px;  font-style:italic; text-align:justify; color:red;}
+#divBienvenida menu p { margin:0px; font-size:14px;  font-style:italic; text-align:justify; color:red;}
+
+#divMenuSecundario  {border:0px solid #a1a1a1; width:838px; padding-top:0px; padding-right:0px; margin-left:0px; float:left;}
+#divMenuSecundario ul li {padding-top:5px; padding-bottom:5px; list-style:none; padding-left:20px; }
+#divMenuSecundario ul li a{ text-decoration:none; font-size:12px; color:#333333; font-weight:bold; padding-top:5px; padding-bottom:5px; border:0px solid #666666; width:450px;  border-bottom:1px solid #fff;}
+#divMenuSecundario ul li a:hover{ color:#990033; border-bottom:1px solid #990033;} 
+#divMenuSecundario ul li p{ font-size:11px; margin:0px;  font-weight:normal; text-decoration:none; text-align:justify;}
+
+#divReportes  {border:0px solid #a1a1a1; width:838px; padding-top:0px; padding-right:0px; margin-left:0px; float:left;}
+#divReportes ul li {padding-top:5px; padding-bottom:5px; list-style:none;  }
+#divReportes ul li a{ text-decoration:none; font-size:12px; color:#333333; font-weight:bold; padding-top:5px; padding-bottom:5px; border:0px solid #666666; width:450px;  border-bottom:1px solid #fff;}
+#divReportes ul li a:hover{ color:#990033; border-bottom:1px solid #990033;} 
+#divReportes ul li p{ font-size:11px; margin:0px;  font-weight:normal; text-decoration:none; text-align:justify;}
+
+#divMenuValidacion  {border:0px solid #a1a1a1; width:600px; padding-top:0px; padding-right:10px; margin-left:0px; float:left;}
+#divMenuValidacion ul li {padding-top:5px; padding-bottom:5px; list-style:none; padding-left:20px; }
+#divMenuValidacion ul li a{ text-decoration:none; font-size:12px; color:#333333; font-weight:bold; padding-top:5px; padding-bottom:5px; border:0px solid #666666; width:450px;}
+#divMenuValidacion ul li a:hover{ color:#990033; } 
+#divMenuValidacion ul li p{ font-size:11px; margin:0px;  font-weight:normal; text-decoration:none; text-align:justify;}
+
+
+#divMenuSecundario a{ text-decoration:none; font-size:12px; color:#333333; font-weight:bold; padding-top:5px; padding-bottom:5px; border:0px solid #666666; width:350px;  border-bottom:1px solid #fff;}
+#divMenuSecundario a:hover{ color:#990033; border-bottom:1px solid #990033;} 
+
+/*#divMenuSecundario ul li label a{ text-decoration:none; font-size:12px; color:#333333; font-weight:bold; padding-top:5px; padding-bottom:5px; border:0px solid #666666; border-bottom:1px solid #fff;}*/
+/*.divMenuSecundarioResumen01 {text-decoration:none; font-size:12px; color:#333333; font-weight:bold; padding-top:5px; padding-bottom:5px; border:0px solid #666666; width:350px;  border-bottom:1px solid #fff;}
+.divMenuSecundarioResumen02 {color:#990033; border-bottom:1px solid #990033;}*/
+
+#divMenuSecundario a {text-decoration:none; font-size:12px; color:#333333; font-weight:bold; padding-top:5px; padding-bottom:5px; border:0px solid #666666; width:350px;  border-bottom:1px solid #fff;}
+#divBody{ float:left; width:100%; border:0px solid #666666; padding-left:00px; padding-right:5px;}
+#divBody table { font-size:11px;}
+#divBody table thead { font-size:12px; font-weight:bold;}
+#divBody table tfoot  { font-size:12px;}
+
+#divExito{ border:0px solid #990033; padding:5px; width:400px; margin-left:45px;}
+
+#divMisAplicaciones{font-family:Arial; font-size:12px; color:#A1A1A1; font-weight:bold; border:0px solid #333333; width:150px; text-align:center; margin-top:15px; margin-left:26px;}
+#divMisAplicaciones a{ text-decoration:none; color:#A1A1A1;}
+#divMisAplicaciones a img{ margin-right:0px;}
+#divMisAplicaciones a:hover{color:#333333;}
+
+#divMenuTop{ font-family:Arial; font-size:12px; color:#A1A1A1; width:670px; margin-top:8px;}
+#divMenuTop a {text-decoration:none; color:#A1A1A1; padding:3px; height:20px;   margin-right:19px; margin-left:19px; font-weight:bold; border-top:3px solid #e1e1e1;}
+#divMenuTop a:hover{color:#333333; border-top:3px solid #990033;}
+
+#divLinkRep{ font-family:Arial; font-size:11px; color:#A1A1A1; width:670px;}
+#divLinkRep a {text-decoration:none; color:#A1A1A1; padding:3px; height:20px; font-weight:bold;}
+#divLinkRep a:hover{color:#333333;}
+
+#divLogoSicom{ border:0px solid #666666; color:#A1A1A1; font-family:  Arial; margin-right:10px; margin-right:25px;}
+#divLogoSicom a{text-decoration:none; color:#A1A1A1; font-size:12px; margin-right:25px;}
+#divLogoSicom a:hover{color:#333333;}
+
+#divSubMnAyuda{position:absolute; top:135px; left:420px; width:130px;}
+#divSubMnAyuda a{ text-decoration:none; padding: 5px 30px 5px 5px; color:#404040; border:1px solid #999999; background-color:#FFFFFF; float:left; width:130px;}
+#divSubMnAyuda a:hover{ background-color:#e5e5e5;}
+
+.Asterisco { color:#990033; font-weight:bold; font-size:12px;}
+.AsteriscoTexto { color:#990033; font-weight:bold; font-size:11px;}
+.IrMenuPrincipal { color:rgb(0,102,171); text-decoration:none; font-weight:bold; font-size:13px; margin-left:00px;}
+.IrMenuPrincipal:hover{ text-decoration:underline; color:#666666;}
+
+.regHead{background-color:#d9c8a4; color:#990033;}
+.regOn{background-color:f5f5f5; color:#000;}
+.regOff{background-color:#e1e1e1; color:#000;}
+.regOver{background-color:rgb(250,234,200); color:#000;}
+
+.titulo1{font-size:15px; }
+.titulo18{font-size:18px; text-transform:uppercase; width:830px; text-align:center; margin:20px; font-weight:bold; }
+
+ 
+.mnBusqueda{ width:130px; text-decoration:none; font-size:11px; padding-top:5px; padding-bottom:5px; padding-left:5px; padding-right:10px; color:#404040; border:1px solid #999999; background-color:#FFFFFF;}
+/*.mnBusqueda:hover{background-color:#e5e5e5;}*/
+.mnBusqueda_hover{width:130px; text-decoration:none; font-size:11px; padding-top:5px; padding-bottom:5px; padding-left:5px; padding-right:10px; color:#404040; border:1px solid #999999; background-color:#e5e5e5;}
+.mnBusquedaSub{ width:145px; text-decoration:none; font-size:11px; padding-top:5px; padding-bottom:5px; padding-left:5px; padding-right:10px; color:#404040; border:1px solid #999999; background-color:#FFFFFF;}
+.mnBusquedaSub_hover{ width:145px; text-decoration:none; font-size:11px; padding-top:5px; padding-bottom:5px; padding-left:5px; padding-right:10px; color:#404040; border:1px solid #999999; background-color:#e5e5e5;}
+/*.mnBusquedaSub:hover{background-color:#e5e5e5;}*/
+
+.excelClass{font-size:11px; color:#666; text-decoration:none;}
+.excelClass:hover{ text-decoration:underline;}
+
+
+.overlay{
+     display: none;
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: #000;
+     z-index:1001;
+     opacity:.75;
+     -moz-opacity: 0.75;
+     filter: alpha(opacity=75);
+}
+
+.modal {
+     display: none;
+     position: absolute;
+     top: 25%;
+     left: 25%;
+     width: 50%;
+     height: 50%;
+     padding: 16px;
+     background: #fff;
+     color: #333333;
+     z-index:1002;
+     overflow: auto;
+}
+
+
+#VerReporte{ color:#0000FF; text-decoration:none;}
+#VerReporte:hover{ text-decoration:underline;}
+.linkAzul{ color:#0033FF; text-decoration:underline; font-weight:normal;}
+.linkAzul:hover{ color:#FF0000; text-decoration:underline;}
+.copyright  {font-size: 9px; color: #7D7D7D; padding-left: 4px;}
+.datos      {font-size: 11px; color: #494949;}
+.titulo     {font-size: 15px; color: #000000; font-weight: bold;}
+.subtit     {font-size: 14px; color: #990000; font-weight: bold;}
+.text       {font: normal 12px Arial; text-transform: uppercase; border: 1px solid #999999; background-color: #FFFFFF;}
+.tabla      {font-family: Arial; font-size:12px;}
+.tablabold  {font-family: Arial; font-size:12px; font-weight: bold}
+.RayaRoja3  {height:3px; background-color:#990033;}
+.rojo       {font: bold 9px Verdana; color: #CC0000;}
+.TxtTexto11 {font: 11px Arial; font-style:italic; color:#990033; font-weight:bold;}
+.TxtTexto10 {font: 11px Arial; color: #000000;}
+.Texto11B   {font: 11px Arial; color: #000000; font-weight:bold;}
+.Texto14B   {font: 14px Arial; color: #000000; font-weight:bold;}
+.boton      {font: bold 10px Arial; color: #191970;}
+.Texto11L   {font: 11px Arial; color: #419DCD; font-weight:bold;}
+.body11     {font-family: Arial; color: #000000; font-size: 11px;}
+.rojoTitulo {font-size: 20px; color: #990000; font-weight: bold;}
+.subtitblue {font-size: 12px; color: #003399; font-weight: bold;}
+.subtitred  {font-size: 12px; color: #E54F66; font-weight: bold;}
+.subtityell {font-size: 12px; color: #993300; font-weight: bold;}
+.subtitlila {font-size: 12px; color: #552897; font-weight: bold;}
+.subtitoran {font-size: 12px; color: #c46207; font-weight: bold;}
