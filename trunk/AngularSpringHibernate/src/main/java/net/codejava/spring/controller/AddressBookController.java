@@ -1,7 +1,7 @@
 package net.codejava.spring.controller;
 
+import net.codejava.spring.generic.AbstractHibernateDao;
 import net.codejava.spring.model.AddressBook;
-import net.codejava.spring.model.User;
 import net.codejava.spring.service.AddressBookService;
 
 import org.hibernate.Criteria;
@@ -9,8 +9,6 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import scala.annotation.meta.getter;
 
 import java.util.List;
 
@@ -20,18 +18,18 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/address")
-public class AddressBookController {
+public class AddressBookController extends AbstractHibernateDao<AddressBook>{
 
     @Autowired
-    AddressBookService bookDao;
+    AddressBookService bookService;
     
     @Autowired
     SessionFactory sessionFactory;
-
+    
     @SuppressWarnings("unchecked")
 	@RequestMapping(value = "/all.json", method = RequestMethod.GET)
     public @ResponseBody List<AddressBook> viewAllAddressBook(){
-    	List<AddressBook> list= sessionFactory.getCurrentSession().createCriteria(AddressBook.class)
+    	List<AddressBook> list= sessionFactory.openSession().createCriteria(AddressBook.class)
 				.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
     	 return list;
         //return bookDao.viewAllAddressBook();
@@ -40,22 +38,22 @@ public class AddressBookController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public @ResponseBody void addAddressBookEntry(@RequestBody AddressBook addressBook){
-        bookDao.createAddressBook(addressBook);
+        bookService.createAddressBook(addressBook);
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
     public @ResponseBody void deleteAddressBookEntry(@PathVariable("id") String id){
-        bookDao.deleteAddressBook(Integer.valueOf(id));
+        bookService.deleteAddressBook(Integer.valueOf(id));
     }
 
     @RequestMapping(value = "/update/{pos}", method = RequestMethod.PUT)
     public @ResponseBody void updateAddressBook(@RequestBody AddressBook addressBook, @PathVariable("pos") String pos){
-        bookDao.updateAddressBook(Integer.valueOf(pos), addressBook);
+        bookService.updateAddressBook(Integer.valueOf(pos), addressBook);
     }
 
     @RequestMapping(value="/delete/all", method = RequestMethod.DELETE)
     public @ResponseBody void deleteAllAddressBook(){
-        bookDao.deleteAllAddressBook();
+        bookService.deleteAllAddressBook();
     }
 
     @RequestMapping("/layout")
