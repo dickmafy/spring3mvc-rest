@@ -4,9 +4,39 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>        
   <session-factory>
-    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-    <property name="show_sql">true</property>
+    
+    
+    
     <!--DEPRECADO - (*h1) usar packagesToScan q Escanea las entidad de Hibernbate -->  
 	<!-- <mapping class="net.codejava.spring.model."/> -->
+	
+		<!-- Database connection settings 
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/MedicalSystem</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+        -->
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- SQL dialect--> 
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Disable the second-level cache  -->
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop the existing tables and create new one e.g. validate | update | create | create-drop : 
+        validate: validate that the schema matches, make no changes to the schema of the database, you probably want this for production.
+		update: update the schema to reflect the entities being persisted
+		create: creates the schema necessary for your entities, destroying any previous data.
+		create-drop: create the schema as in create above, but also drop the schema at the end of the session. This is great in early development or for testing.
+		-->
+        <property name="hbm2ddl.auto">update</property>
+	
+	
   </session-factory>
 </hibernate-configuration>

@@ -8,11 +8,11 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="book")
+@Table(name="BOOK")
 public class AddressBook {
 
 	@Id
-	@Column(name="USER_ID")
+	@Column(name="BOOK_ID")
 	@GeneratedValue
     private long id;
 
