@@ -22,7 +22,16 @@
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-	
+
+	<!-- Put this “context:component” in bean configuration file, it means, 
+		enable auto scanning feature in Spring. The base-package is indicate where 
+		are your components stored, Spring will scan this folder and find out the 
+		bean (annotated with @Component) and register it in Spring container. 
+		@Component – Indicates a auto scan component.
+		@Repository – Indicates DAO component in the persistence layer.
+		@Service – Indicates a Service component in the business layer.
+		@Controller – Indicates a controller component in the presentation layer.
+		-->
 	<context:component-scan base-package="net.codejava.spring" />
 	
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
@@ -46,14 +55,20 @@
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
     
-     <!-- Para que funcione el fileUpload -->
+     <!-- Primefaces ? Para que funcione el fileUpload -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="2000000" />
     </bean>
     
+    
+    <!-- DAO IMPLEMENT -->
     <bean id="userDao" class="net.codejava.spring.dao.UserDAOImpl">
 	    <constructor-arg>
 	        <ref bean="sessionFactory" />
 	    </constructor-arg>
-	</bean>    	
+	</bean>
+	<bean id="bookDao" class="net.codejava.spring.dao.BookDAOImpl">
+	</bean>
+	
+	    	
 </beans>
