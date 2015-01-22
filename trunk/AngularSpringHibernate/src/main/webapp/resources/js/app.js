@@ -22,8 +22,7 @@ App.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/tabs', {
         templateUrl: 'tabs/layout',
         controller: TabsController
-    })
-
+    });
     $routeProvider.when('/file', {
         templateUrl: 'file/layout',
         controller: FileController
@@ -43,7 +42,6 @@ App.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/d3', {
         templateUrl: 'd3/layout',
         controller: D3Controller
-    })
-
-    $routeProvider.otherwise({redirectTo: '/todo'});
+    });
+    $routeProvider.otherwise({redirectTo: '/'});
 }]);
