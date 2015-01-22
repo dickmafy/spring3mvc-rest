@@ -13,7 +13,6 @@
     <!-- Loading Flat UI -->
     <link href="resources/css/flat-ui.css" rel="stylesheet">
     <link href="resources/css/docs.css" rel="stylesheet">
-
     <link href="resources/css/nv.d3.min.css" rel="stylesheet">
 
 </head>
