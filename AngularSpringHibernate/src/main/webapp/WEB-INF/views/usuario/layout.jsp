@@ -4,7 +4,7 @@
 
     <div class="demo-row">
         <div class="demo-title">
-           Address Book
+           USUARIO / LAYOUT
         </div>
         <div class="demo-content">
             <div class="alert alert-error" ng-show="error">{{errorMessage}}</div>
@@ -43,6 +43,7 @@
             <div class="alert alert-info" style="width:400px;margin-left:100px;" ng-show="addressBooks.length == 0">
                 No address book entry found
             </div>
+            addressBooks.length : {{addressBooks.length}}
             <table class="table table-bordered table-striped" ng-show="addressBooks.length > 0">
                 <thead>
                 <tr>
@@ -51,14 +52,14 @@
                     <th style="text-align: center;"><a href="" ng-click="reverse=!reverse;order('firstName', reverse)">First Name</a></th>
                     <th style="text-align: center;"><a href="" ng-click="reverse=!reverse;order('lastName', reverse)">Last Name</a></th>
                     <th style="text-align: center;"><a href="" ng-click="reverse=!reverse;order('phone', reverse)">Phone Number</a></th>
-                    <th style="text-align: center;"><a href="" ng-click="reverse=!reverse;order('email', reverse)">Email</a></th>
+                    <th style="text-align: center;"><a href="" ng-click="reverse=!reverse;order('correo', reverse)">Email</a></th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr ng-repeat="addressBook in addressBooks | filter:searchAddressBook">
                     <td  style="width:70px;text-align:center;"><button class="btn btn-mini btn-danger" ng-click="deleteAddressBook(addressBooks.indexOf(addressBook))">Delete</button></td>
                     <td  style="width:70px;text-align:center;"><button class="btn btn-mini btn-danger" ng-click="editAddressBook(addressBooks.indexOf(addressBook), addressBook)">Update</button></td>
-                    <td>{{addressBook.firstName}}</td><td>{{addressBook.lastName}}</td><td>{{addressBook.phone}}</td><td>{{addressBook.email}}</td>
+                    <td>{{addressBook.firstName}}</td><td>{{addressBook.lastName}}</td><td>{{addressBook.phone}}</td><td>{{addressBook.correo}}</td>
                 </tr>
                 </tbody>
             </table>
