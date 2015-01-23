@@ -6,9 +6,13 @@ import net.codejava.spring.model.Usuario;
 
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 public class UserDAOImpl implements UserDAO {
+	
+	@Autowired
 	private SessionFactory sessionFactory;
 
 	public UserDAOImpl(SessionFactory sessionFactory) {

@@ -2,6 +2,7 @@ package net.codejava.spring.controller;
 
 import net.codejava.spring.generic.AbstractHibernateDao;
 import net.codejava.spring.model.Usuario;
+import net.codejava.spring.util.equifax.ConstantesUtil;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
@@ -45,7 +46,7 @@ public class UsuarioController extends AbstractHibernateDao<Usuario>{
     
     @RequestMapping("/layout")
     public String getTodoPartialPage() {
-        return "login/layout";
+        return ConstantesUtil.LAYOUT_USUARIO+"/layout";
     }
     /*
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)

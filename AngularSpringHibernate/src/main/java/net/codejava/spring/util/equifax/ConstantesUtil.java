@@ -2,6 +2,9 @@ package net.codejava.spring.util.equifax;
 
 public class ConstantesUtil {
 
+	//LAYOUT'S
+	public static final String LAYOUT_USUARIO = "usuario";
+	
 	public static final String OPTION_SELECT = "--SELECCIONAR--";
 
 	public static final String RESPUESTA_OK = "OK";
