@@ -2,7 +2,7 @@ package net.codejava.spring.dao;
 
 import java.util.List;
 
-import net.codejava.spring.model.User;
+import net.codejava.spring.model.Usuario;
 
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
@@ -17,10 +17,10 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	@Transactional
-	public List<User> list() {
+	public List<Usuario> list() {
 		@SuppressWarnings("unchecked")
-		List<User> listUser = (List<User>) sessionFactory.getCurrentSession()
-				.createCriteria(User.class)
+		List<Usuario> listUser = (List<Usuario>) sessionFactory.getCurrentSession()
+				.createCriteria(Usuario.class)
 				.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
 
 		return listUser;

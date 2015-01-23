@@ -19,7 +19,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class ProductoDAOImpl implements ProductoDAO {
 
-	private static final Logger log = Logger.getLogger(ProductoDAOImpl.class);
+	private static final Logger LOG = Logger.getLogger(ProductoDAOImpl.class);
 	/*
 	@Autowired
 	private JdbcTemplate jdbcTemplate;

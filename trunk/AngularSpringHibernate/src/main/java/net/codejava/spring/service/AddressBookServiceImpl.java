@@ -1,5 +1,5 @@
 package net.codejava.spring.service;
-
+/*
 import net.codejava.spring.dao.BookDAO;
 import net.codejava.spring.generic.AbstractHibernateDao;
 import net.codejava.spring.model.AddressBook;
@@ -11,9 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by tmichels on 8/3/14.
- */
 @Service
 public class AddressBookServiceImpl extends AbstractHibernateDao<AddressBook> implements AddressBookService  {
 	
@@ -61,3 +58,4 @@ public class AddressBookServiceImpl extends AbstractHibernateDao<AddressBook> im
 		return addressBooks.get(id);
 	}
 }
+*/
