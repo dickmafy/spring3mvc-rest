@@ -61,7 +61,7 @@
     </bean>
     
     
-    <!-- DAO IMPLEMENT -->
+    <!-- DAO IMPLEMENT--> 
     <bean id="userDao" class="net.codejava.spring.dao.UserDAOImpl">
 	    <constructor-arg>
 	        <ref bean="sessionFactory" />
