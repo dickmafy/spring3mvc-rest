@@ -2,17 +2,14 @@ package net.codejava.spring.dao;
 
 import java.util.List;
 
-import net.codejava.spring.model.AddressBook;
-import net.codejava.spring.model.User;
-
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-public class BookDAOImpl implements BookDAO {
-	
+public class BookDAOImpl  {
+	/*
 	@Autowired
 	private SessionFactory sessionFactory;
 
@@ -29,5 +26,5 @@ public class BookDAOImpl implements BookDAO {
 
 		return listUser;
 	}
-
+*/
 }

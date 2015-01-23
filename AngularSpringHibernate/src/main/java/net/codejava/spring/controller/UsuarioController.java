@@ -1,8 +1,7 @@
 package net.codejava.spring.controller;
-/*
+
 import net.codejava.spring.generic.AbstractHibernateDao;
-import net.codejava.spring.model.AddressBook;
-import net.codejava.spring.service.AddressBookService;
+import net.codejava.spring.model.Usuario;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
@@ -13,36 +12,42 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 
 
 @Controller
-@RequestMapping("/address")
-public class AddressBookController extends AbstractHibernateDao<AddressBook>{
+@RequestMapping("/usuario")
+public class UsuarioController extends AbstractHibernateDao<Usuario>{
 
-	private static Logger LOG = Logger.getLogger(AddressBookController.class);
+	private static Logger LOG = Logger.getLogger(UsuarioController.class);
 
-	
-    @Autowired
-    AddressBookService bookService;
-    
-    @Autowired
+	@Autowired
     SessionFactory sessionFactory;
+	
+	@PostConstruct
+	public void init() {
+		LOG.info("UsuarioController");
+	}
     
-    @SuppressWarnings("unchecked")
 	@RequestMapping(value = "/all.json", method = RequestMethod.GET)
-    public @ResponseBody List<AddressBook> viewAllAddressBook(){
-    	List<AddressBook> list= sessionFactory.openSession().createCriteria(AddressBook.class)
+    public @ResponseBody List<Usuario> listUsuario(){
+    	@SuppressWarnings("unchecked")
+		List<Usuario> list= sessionFactory.openSession().createCriteria(Usuario.class)
 				.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
     	 return list;
-        //return bookDao.viewAllAddressBook();
-    	
     }
-
+    
+    
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public @ResponseBody void addAddressBookEntry(@RequestBody AddressBook addressBook){
-        bookService.createAddressBook(addressBook);
+    public @ResponseBody void insertUsuario(@RequestBody Usuario o){
+        getOpenSession().save(o);
     }
-
+    
+    @RequestMapping("/layout")
+    public String getTodoPartialPage() {
+        return "login/layout";
+    }
+    /*
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
     public @ResponseBody void deleteAddressBookEntry(@PathVariable("id") String id){
         bookService.deleteAddressBook(Integer.valueOf(id));
@@ -58,11 +63,8 @@ public class AddressBookController extends AbstractHibernateDao<AddressBook>{
         bookService.deleteAllAddressBook();
     }
 
-    @RequestMapping("/layout")
-    public String getTodoPartialPage() {
-        return "addressbook/layout";
-    }
-    
+   
+  */  
     
 
 	/*
@@ -714,9 +716,9 @@ public class AddressBookController extends AbstractHibernateDao<AddressBook>{
 	    
 		return positions;
 	}
-	
+*/	
 
     
 }
 
-*/
+
