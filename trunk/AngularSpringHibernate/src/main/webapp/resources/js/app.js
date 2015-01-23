@@ -11,9 +11,9 @@ App.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'todo/layout',
         controller: TodoController
     });
-    $routeProvider.when('/address', {
-        templateUrl: 'address/layout',
-        controller: AddressBookController
+    $routeProvider.when('/usuario', {
+        templateUrl: 'usuario/layout',
+        controller: UsuarioController
     });
     $routeProvider.when('/table', {
         templateUrl: 'table/layout',
