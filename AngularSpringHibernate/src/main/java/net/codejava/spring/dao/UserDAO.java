@@ -6,4 +6,5 @@ import net.codejava.spring.model.Usuario;
 
 public interface UserDAO {
 	public List<Usuario> list();
+	void deleteUsuario(Usuario o);
 }

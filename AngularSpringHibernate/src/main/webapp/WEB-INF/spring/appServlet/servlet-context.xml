@@ -33,6 +33,7 @@
 		@Controller – Indicates a controller component in the presentation layer.
 		-->
 	<context:component-scan base-package="net.codejava.spring" />
+	<context:component-scan base-package="net.codejava.spring.controller" />
 	
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -49,29 +50,22 @@
 		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
     </bean>
      
-    <tx:annotation-driven />
-    <bean id="transactionManager"
-        class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="dataSource" ref="dataSource" />
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
     
-     <!-- Primefaces ? Para que funcione el fileUpload -->
-    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="maxUploadSize" value="2000000" />
-    </bean>
-    
-    
-    <!-- DAO IMPLEMENT--> 
+   <!-- DAO IMPLEMENT 
     <bean id="userDao" class="net.codejava.spring.dao.UserDAOImpl">
-	    <constructor-arg>
-	        <ref bean="sessionFactory" />
-	    </constructor-arg>
-	</bean>
-	<bean id="bookDao" class="net.codejava.spring.dao.BookDAOImpl">
 	</bean>
 	
-	<bean id="abstractHibernateDao" class="net.codejava.spring.generic.AbstractHibernateDao">
+	 <bean id="usuarioController" class="net.codejava.spring.controller.UsuarioController">
+	 <property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+-->	
 	
+	
+    
 	    	
 </beans>

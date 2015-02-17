@@ -9,11 +9,11 @@
 			<div class="row">
 				<form ng-submit="addUsuario(ab)">
 					<div class="col-lg-8">
-						<input class="form-control" placeholder="Ingresa correo" type="text"
-							ng-model="ab.correo" required min="1" /> 
+						<input class="form-control" placeholder="Ingresa nombre" type="text"
+							ng-model="ab.nombre" required min="1" /> 
 							<input
-							class="form-control" placeholder="Ingresa contraseña" type="text"
-							ng-model="ab.contrasena" required min="1" />
+							class="form-control" placeholder="Ingresa correo" type="text"
+							ng-model="ab.correo" required min="1" />
 					</div>
 				</form>
 
@@ -78,8 +78,8 @@
 								class="btn btn-mini btn-danger"
 								ng-click="editAddressBook(addressBooks.indexOf(addressBook), addressBook)">Update</button></td>
 						<td>{{addressBook.id}}</td>
+						<td>{{addressBook.nombre}}</td>
 						<td>{{addressBook.correo}}</td>
-						<td>{{addressBook.contrasena}}</td>
 					</tr>
 				</tbody>
 			</table>
