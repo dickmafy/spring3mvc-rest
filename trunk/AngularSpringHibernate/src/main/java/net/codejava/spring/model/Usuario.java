@@ -1,211 +1,114 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package net.codejava.spring.model;
 
 import java.io.Serializable;
+import java.util.Date;
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
-import net.codejava.spring.util.logick.DateHelper;
 
-import java.util.Date;
-
+/**
+ *
+ * @author DIEGO
+ */
 @Entity
-@Table(name = "usuario")
+@NamedQueries({
+    @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u")})
 public class Usuario implements Serializable {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "PK_USUARIO") 
+    private Long id; 
+    private String nombre;
+    private String correo;
+    private Integer estado;
+    @Column(name = "FEC_CREACION")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date fecCreacion;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "pk_usuario")
-	private Long id;
+    public Usuario() {
+    }
 
-	@Column(name = "pk_perfil")
-	private Long perfil;
+    public Usuario(Long pkUsuario) {
+        this.id = pkUsuario;
+    }
 
-	@Column
-	private String usuario;
+    public Long getId() {
+        return id;
+    }
 
-	@Column
-	private String contrasena;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	@Column
-	private Long pertenencia;
+    public String getNombre() {
+        return nombre;
+    }
 
-	@Column
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date creacion;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-	@Column
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date modificacion;
+    public String getCorreo() {
+        return correo;
+    }
 
-	@Column
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date acceso;
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
 
-	@Column
-	private Long institucion;
+    public Integer getEstado() {
+        return estado;
+    }
 
-	@Column
-	private String nombres;
+    public void setEstado(Integer estado) {
+        this.estado = estado;
+    }
 
-	@Column
-	private String correo;
+    public Date getFecCreacion() {
+        return fecCreacion;
+    }
 
-	@Column
-	private Long estado;
+    public void setFecCreacion(Date fecCreacion) {
+        this.fecCreacion = fecCreacion;
+    }
 
-	@Transient
-	private String nombrePerfil;
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (id != null ? id.hashCode() : 0);
+        return hash;
+    }
 
-	@Transient
-	private String nombreUsuario;
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Usuario)) {
+            return false;
+        }
+        Usuario other = (Usuario) object;
+        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+            return false;
+        }
+        return true;
+    }
 
-	@Column
-	private Long estadoPerfil;
-	
-	
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getPerfil() {
-		return perfil;
-	}
-
-	public void setPerfil(Long perfil) {
-		this.perfil = perfil;
-	}
-
-	public String getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
-	}
-
-	public String getContrasena() {
-		return contrasena;
-	}
-
-	public void setContrasena(String contrasena) {
-		this.contrasena = contrasena;
-	}
-
-	public Date getCreacion() {
-		return creacion;
-	}
-
-	public void setCreacion(Date creacion) {
-		this.creacion = creacion;
-	}
-
-	public Date getModificacion() {
-		return modificacion;
-	}
-
-	public void setModificacion(Date modificacion) {
-		this.modificacion = modificacion;
-	}
-
-	public Date getAcceso() {
-		return acceso;
-	}
-
-	public void setAcceso(Date acceso) {
-		this.acceso = acceso;
-	}
-
-	public Long getInstitucion() {
-		return institucion;
-	}
-
-	public void setInstitucion(Long institucion) {
-		this.institucion = institucion;
-	}
-
-	public Long getPertenencia() {
-		return pertenencia;
-	}
-
-	public void setPertenencia(Long pertenencia) {
-		this.pertenencia = pertenencia;
-	}
-
-	public String getNombres() {
-		return nombres;
-	}
-
-	public void setNombres(String nombres) {
-		this.nombres = nombres;
-	}
-
-	public String getCorreo() {
-		return correo;
-	}
-
-	public void setCorreo(String correo) {
-		this.correo = correo;
-	}
-
-	public Long getEstado() {
-		return estado;
-	}
-
-	public void setEstado(Long estado) {
-		this.estado = estado;
-	}
-
-	public Long getEstadoPerfil() {
-		return estadoPerfil;
-	}
-
-	public void setEstadoPerfil(Long estadoPerfil) {
-		this.estadoPerfil = estadoPerfil;
-	}
-
-	public String getNombrePerfil() {
-		return nombrePerfil;
-	}
-
-	public void setNombrePerfil(String nombrePerfil) {
-		this.nombrePerfil = nombrePerfil;
-	}
-
-	public String getNombreUsuario() {
-		return nombreUsuario;
-	}
-
-	public void setNombreUsuario(String nombreUsuario) {
-		this.nombreUsuario = nombreUsuario;
-	}
-
-	@Transient
-	public String getUltimoAcceso() {
-		if (acceso != null) {
-			return DateHelper.getDateFormat("dd/MM/yyyy HH:mm", acceso);
-		}
-		return "";
-	}
-
-	public void setUltimoAcceso(String ultimoAcceso) {
-	}
-
-	
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
+    @Override
+    public String toString() {
+        return "net.codejava.spring.model.Usuario[ pkUsuario=" + id + " ]";
+    }
+    
 }
