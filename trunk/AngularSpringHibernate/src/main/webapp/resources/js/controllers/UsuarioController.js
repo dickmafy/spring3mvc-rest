@@ -18,15 +18,15 @@ var UsuarioController = function($scope, $http){
         $scope.editMode = false;
     };
 
-    $scope.addAddressBook = function(ab) {
-        $http.post('address/add', ab).success(function(response){
+    $scope.addUsuario = function(ab) {
+        $http.post('usuario/add', ab)
+        .success(function(response){
             $scope.viewAllAddressBook();
-            $scope.ab.firstName='';
-            $scope.ab.lastName='';
-            $scope.ab.phone = '';
-            $scope.ab.email = '';
+            $scope.ab.correo='';
+            $scope.ab.contrasena='';
+            console.log('Correcto' + ab);
         }).error(function(response){
-            console.log(response);
+            console.log('Error' + response);
         });
     };
 
@@ -43,9 +43,10 @@ var UsuarioController = function($scope, $http){
         });
     };
 
-    $scope.deleteAddressBook = function(id) {
-        $http.delete('address/delete/' + id).success(function(response){
+    $scope.deleteUsuario = function(objeto) {
+        $http.post('usuario/delete' ,objeto).success(function(response){
             $scope.viewAllAddressBook();
+            console.log('Correcto Eliminado' + objeto.id);
         }).error(function(response){
             console.log(response);
         });

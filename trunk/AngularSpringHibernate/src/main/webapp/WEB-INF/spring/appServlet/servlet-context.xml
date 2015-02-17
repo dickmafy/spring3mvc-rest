@@ -70,5 +70,8 @@
 	<bean id="bookDao" class="net.codejava.spring.dao.BookDAOImpl">
 	</bean>
 	
+	<bean id="abstractHibernateDao" class="net.codejava.spring.generic.AbstractHibernateDao">
+	</bean>
+	
 	    	
 </beans>

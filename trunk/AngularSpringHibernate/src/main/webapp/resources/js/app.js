@@ -15,33 +15,6 @@ App.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'usuario/layout',
         controller: UsuarioController
     });
-    $routeProvider.when('/table', {
-        templateUrl: 'table/layout',
-        controller: TableController
-    });
-    $routeProvider.when('/tabs', {
-        templateUrl: 'tabs/layout',
-        controller: TabsController
-    });
-    $routeProvider.when('/file', {
-        templateUrl: 'file/layout',
-        controller: FileController
-    });
-    $routeProvider.when('/editor', {
-        templateUrl: 'editor/layout',
-        controller: EditorController
-    });
-    $routeProvider.when('/restangular', {
-        templateUrl: 'restangular/layout',
-        controller: RestController
-    });
-    $routeProvider.when('/force', {
-        templateUrl: 'force/layout',
-        controller: ForceController
-    });
-    $routeProvider.when('/d3', {
-        templateUrl: 'd3/layout',
-        controller: D3Controller
-    });
+    
     $routeProvider.otherwise({redirectTo: '/'});
 }]);
