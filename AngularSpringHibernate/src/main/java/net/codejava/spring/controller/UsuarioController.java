@@ -39,21 +39,40 @@ public class UsuarioController extends AbstractHibernateDao<Usuario>{
     }
     
     
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public @ResponseBody void insertUsuario(@RequestBody Usuario o){
-        getOpenSession().save(o);
-    }
-    
     @RequestMapping("/layout")
     public String getTodoPartialPage() {
         return ConstantesUtil.LAYOUT_USUARIO+"/layout";
     }
-    /*
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
-    public @ResponseBody void deleteAddressBookEntry(@PathVariable("id") String id){
-        bookService.deleteAddressBook(Integer.valueOf(id));
+    
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public @ResponseBody void insertUsuario(@RequestBody Usuario o){
+        sessionFactory.openSession().save(o);
+        sessionFactory.openSession().delete(o);
+    }
+    
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
+    public @ResponseBody void deleteUsuario(@RequestBody Usuario o){
+    	try {
+    		sessionFactory.openSession().delete(o);
+    		
+    		
+		} catch (Exception e) {
+			delete(o);
+
+    		
+		}
+    	
     }
 
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+    /*
     @RequestMapping(value = "/update/{pos}", method = RequestMethod.PUT)
     public @ResponseBody void updateAddressBook(@RequestBody AddressBook addressBook, @PathVariable("pos") String pos){
         bookService.updateAddressBook(Integer.valueOf(pos), addressBook);
