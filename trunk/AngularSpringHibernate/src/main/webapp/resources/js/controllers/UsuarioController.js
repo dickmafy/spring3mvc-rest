@@ -1,68 +1,88 @@
+var UsuarioController = function($scope, $http) {
 
-var UsuarioController = function($scope, $http){
+	$scope.editMode = false;
+	$scope.position = '';
+	$scope.add = "UsuarioController";
+	
 
-    $scope.editMode = false;
-    $scope.position = '';
+	$scope.list = function() {
+		$http.get('usuario/list.json').success(function(response) {
+			$scope.beanList = response;
+			
+		});
+	};
 
-    $scope.viewAllAddressBook = function(){
-        $http.get('usuario/all.json').success(function(response){
-            $scope.addressBooks = response;
-        });
-    };
+	$scope.reset = function() {
+		$scope.bean.correo = '';
+		$scope.bean.nombre = '';
+		$scope.editMode = false;
+	};
 
-    $scope.resetAddressBookField = function(){
-        $scope.ab.firstName='';
-        $scope.ab.lastName='';
-        $scope.ab.phone = '';
-        $scope.ab.email = '';
-        $scope.editMode = false;
-    };
+	$scope.add = function(bean) {
+		$http.post('usuario/add', bean).success(function(response) {
+			$scope.list();
+			$scope.bean.correo = '';
+			$scope.bean.contrasena = '';
+			console.log('Correcto' + bean);
+			$scope.setSuccess('exito al grabar.');
+		}).error(function(response) {
+			console.log('Error' + response);
+			$scope.setError('error al ADD');
+		});
+	};
 
-    $scope.addUsuario = function(ab) {
-        $http.post('usuario/add', ab)
-        .success(function(response){
-            $scope.viewAllAddressBook();
-            $scope.ab.correo='';
-            $scope.ab.contrasena='';
-            console.log('Correcto' + ab);
-        }).error(function(response){
-            console.log('Error' + response);
-        });
-    };
+	$scope.update = function(bean) {
+		$http.post('usuario/update/', bean).success(
+				function(response) {
+					$scope.bean.correo = '';
+					$scope.bean.nombre = '';
+					$scope.list();
+					$scope.editMode = false;
+					$scope.setSuccess('exito al actualizar.');
+				}).error(function(response) {
+			console.log(response);
+		});
+	};
 
-    $scope.updateAddressBook = function(ab) {
-        $http.put('address/update/'+$scope.position, ab).success(function(response){
-            $scope.ab.firstName='';
-            $scope.ab.lastName='';
-            $scope.ab.phone = '';
-            $scope.ab.email = '';
-            $scope.viewAllAddressBook();
-            $scope.editMode = false;
-        }).error(function(response){
-            console.log(response);
-        });
-    };
+	$scope.delete = function(bean) {
+		$http.post('usuario/delete', bean).success(function(response) {
+			$scope.list();
+			console.log('Correcto Eliminado' + bean.id);
+			$scope.setSuccess('exito al borrar.');
+		}).error(function(response) {
+			console.log(response);
+		});
+	};
 
-    $scope.deleteUsuario = function(objeto) {
-        $http.post('usuario/delete' ,objeto).success(function(response){
-            $scope.viewAllAddressBook();
-            console.log('Correcto Eliminado' + objeto.id);
-        }).error(function(response){
-            console.log(response);
-        });
-    };
+	$scope.set = function(pos, bean) {
+		$scope.position = pos;
+		$scope.bean = bean;
+		$scope.editMode = true;
+	};
+	
+	 $scope.resetError = function() {
+	        $scope.error = false;
+	        $scope.errorMessage = '';
+	    };
 
-    $scope.deleteAllAddressBook = function(){
-        $http.delete('address/delete/all').success(function(response){
-            $scope.viewAllAddressBook();
-        });
-    };
+	    $scope.setError = function(message) {
+	        $scope.error = true;
+	        $scope.success = false;
+	        $scope.errorMessage = message;
+	    };
+	    
+	    $scope.resetSuccess = function() {
+	        $scope.success = false;
+	        $scope.successMessage = '';
+	    };
 
-    $scope.editAddressBook = function(pos, addressBook){
-        $scope.position = pos;
-        $scope.ab = addressBook;
-        $scope.editMode = true;
-    };
+	    $scope.setSuccess = function(message) {
+	        $scope.success = true;
+	        $scope.error = false;
+	        $scope.successMessage = message;
+	    };
+	    
+	    
 
-    $scope.viewAllAddressBook();
+	$scope.list();
 };
