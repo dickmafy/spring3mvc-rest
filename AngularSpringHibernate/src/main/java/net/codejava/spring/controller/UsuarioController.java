@@ -21,20 +21,20 @@ import javax.annotation.PostConstruct;
 @RequestMapping("/usuario")
 public class UsuarioController extends AbstractHibernateDao<Usuario> {
 
-	private static Logger LOG = Logger.getLogger(UsuarioController.class);
+	private static Logger	LOG	= Logger.getLogger(UsuarioController.class);
 
 	@Autowired
-	private UserDAO dao;
+	private UserDAO			dao;
 
 	@Autowired
-	SessionFactory sessionFactory;
+	SessionFactory			sessionFactory;
 
 	@PostConstruct
 	public void init() {
 		LOG.info("UsuarioController");
 	}
 
-	@RequestMapping(value = "/all.json", method = RequestMethod.GET)
+	@RequestMapping(value = "/list.json", method = RequestMethod.GET)
 	public @ResponseBody
 	List<Usuario> listUsuario() {
 		return dao.list();
@@ -45,23 +45,24 @@ public class UsuarioController extends AbstractHibernateDao<Usuario> {
 		return ConstantesUtil.LAYOUT_USUARIO + "/layout";
 	}
 
-	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public @ResponseBody
-	void insertUsuario(@RequestBody Usuario o) {
-		save(o);
+	void insertUsuario(@RequestBody Usuario bean) {
+		save(bean);
 	}
 
 	@RequestMapping(value = "/delete", method = RequestMethod.POST)
 	public @ResponseBody
-	void deleteUsuario(@RequestBody Usuario o) {
-		try {
-			delete(o);
-		} catch (Exception e) {
-
-		}
-
+	void deleteUsuario(@RequestBody Usuario bean) {
+		delete(bean);
 	}
+
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public @ResponseBody
+	void updateUsuario(@RequestBody Usuario bean) {
+		update(bean);
+	}
+
 	/*
 	 * public SessionFactory getSessionFactory() { return sessionFactory; }
 	 * 
