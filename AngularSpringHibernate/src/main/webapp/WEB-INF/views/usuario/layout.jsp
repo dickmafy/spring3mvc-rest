@@ -66,6 +66,15 @@
 					</tr>
 				</tbody>
 			</table>
+			
+			<div data-ng-init="getPersonDataFromServer()">
+					<b>Person Data:</b> <select id="personData">
+						<option value="">-- Select Persons --</option>
+						<option data-ng-repeat="bean in beanList" value="{{bean.id}}">{{bean.nombre}}</option>
+					</select><br>
+				</div>
+		
+
 		</div>
 		<!-- /.demo-content -->
 	</div>
